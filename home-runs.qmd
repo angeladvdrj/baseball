@@ -24,6 +24,8 @@ hr_by_season <- Teams |>
 ```
 
 ```{r}
+library(tidyverse)
+
 ggplot(hr_by_season, aes(x = yearID, y = hr_per_game, color = shortened)) +
   geom_line(linewidth = 1) +
   scale_color_manual(
@@ -43,6 +45,8 @@ ggplot(hr_by_season, aes(x = yearID, y = hr_per_game, color = shortened)) +
 The suspicious seasons stand out sharply when compared to a normal recent year. In 2019, MLB played 4,858 team-games and produced 6,776 home runs, or about 1.39 home runs per team-game. By contrast, the shorter or disrupted seasons had much lower rates:
 
 ```{r}
+library(Lahman)
+
 comparison <- Teams |>
   group_by(yearID) |>
   summarise(
