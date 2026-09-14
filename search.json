@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Baseball",
+    "section": "",
+    "text": "This site uses the Lahman baseball database to explore how the sport has changed over time. The clearest pattern is in the home-run rate by season: when the number of team-games dropped in shortened or disrupted seasons, home runs per game fell as well, while a full season like 2019 shows a much higher baseline. The analysis pages in the navbar walk through that trend and the broader story behind it.\nA second theme is the long view of player greatness. By comparing career totals, the site highlights the players who stand out as the all-time sluggers, with a particular focus on how those totals overlap with the steroid era. Together, these pages show how baseball statistics can reveal both the rhythm of the season and the lasting impact of the game’s biggest hitters."
+  },
+  {
+    "objectID": "index.html#a-history-of-the-game-told-through-data",
+    "href": "index.html#a-history-of-the-game-told-through-data",
+    "title": "Baseball",
+    "section": "",
+    "text": "This site uses the Lahman baseball database to explore how the sport has changed over time. The clearest pattern is in the home-run rate by season: when the number of team-games dropped in shortened or disrupted seasons, home runs per game fell as well, while a full season like 2019 shows a much higher baseline. The analysis pages in the navbar walk through that trend and the broader story behind it.\nA second theme is the long view of player greatness. By comparing career totals, the site highlights the players who stand out as the all-time sluggers, with a particular focus on how those totals overlap with the steroid era. Together, these pages show how baseball statistics can reveal both the rhythm of the season and the lasting impact of the game’s biggest hitters."
+  },
+  {
+    "objectID": "sluggers.html",
+    "href": "sluggers.html",
+    "title": "Sluggers",
+    "section": "",
+    "text": "This page highlights the players with the most career home runs."
+  },
+  {
+    "objectID": "home-runs.html",
+    "href": "home-runs.html",
+    "title": "Home runs",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\n\n\n\n\nThe suspicious seasons stand out sharply when compared to a normal recent year. In 2019, MLB played 4,858 team-games and produced 6,776 home runs, or about 1.39 home runs per team-game. By contrast, the shorter or disrupted seasons had much lower rates:\n\n\n\nComparison of a normal recent season with the suspicious seasons\n\n\nSeason\nTotal home runs\nTotal team-games\nHome runs per game\n\n\n\n\n2020\n2304\n1796\n1.28\n\n\n2019\n6776\n4858\n1.39\n\n\n1994\n3306\n3200\n1.03\n\n\n1981\n1781\n2788\n0.64\n\n\n\n\n\nThe drop in home-run rate in 1981, 1994, and 2020 is consistent with those seasons being shortened or affected by disruptions, while 2019 reflects a more typical full season.\nThis page explores home run trends in Major League Baseball."
+  }
+]
