@@ -1,0 +1,69 @@
+---
+title: "Home runs"
+---
+
+```{r}
+#| cache: true
+#| message: false
+library(tidyverse)
+library(Lahman)
+
+shortened_seasons <- c(1918, 1919, 1981, 1994, 1995, 2020)
+
+hr_by_season <- Teams |>
+  group_by(yearID) |>
+  summarise(
+    total_hr = sum(HR, na.rm = TRUE),
+    total_team_games = sum(G, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(
+    hr_per_game = total_hr / total_team_games,
+    shortened = yearID %in% shortened_seasons
+  )
+```
+
+```{r}
+ggplot(hr_by_season, aes(x = yearID, y = hr_per_game, color = shortened)) +
+  geom_line(linewidth = 1) +
+  scale_color_manual(
+    values = c("FALSE" = "steelblue", "TRUE" = "firebrick"),
+    labels = c("Regular season", "Shortened season")
+  ) +
+  labs(
+    title = "Home runs per team-game by season",
+    x = "Season",
+    y = "Home runs per team-game",
+    color = "Season type",
+    caption = "Source: Lahman Teams dataset; shortened seasons marked in red."
+  ) +
+  theme_minimal()
+```
+
+The suspicious seasons stand out sharply when compared to a normal recent year. In 2019, MLB played 4,858 team-games and produced 6,776 home runs, or about 1.39 home runs per team-game. By contrast, the shorter or disrupted seasons had much lower rates:
+
+```{r}
+comparison <- Teams |>
+  group_by(yearID) |>
+  summarise(
+    total_hr = sum(HR, na.rm = TRUE),
+    total_team_games = sum(G, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(hr_per_game = total_hr / total_team_games) |>
+  filter(yearID %in% c(2019, 1981, 1994, 2020)) |>
+  arrange(desc(yearID))
+
+comparison |>
+  rename(
+    Season = yearID,
+    `Total home runs` = total_hr,
+    `Total team-games` = total_team_games,
+    `Home runs per game` = hr_per_game
+  ) |>
+  knitr::kable(digits = 2, caption = "Comparison of a normal recent season with the suspicious seasons")
+```
+
+The drop in home-run rate in 1981, 1994, and 2020 is consistent with those seasons being shortened or affected by disruptions, while 2019 reflects a more typical full season.
+
+This page explores home run trends in Major League Baseball.

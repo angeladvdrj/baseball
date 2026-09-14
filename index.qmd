@@ -1,0 +1,7 @@
+---
+title: "Baseball"
+---
+
+## A history of the game, told through data
+
+This site explores the history of Major League Baseball through data, using the Lahman database to trace player careers, team trends, and the evolution of the sport over time.
