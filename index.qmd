@@ -4,4 +4,6 @@ title: "Baseball"
 
 ## A history of the game, told through data
 
-This site explores the history of Major League Baseball through data, using the Lahman database to trace player careers, team trends, and the evolution of the sport over time.
+This site uses the Lahman baseball database to explore how the sport has changed over time. The clearest pattern is in the home-run rate by season: when the number of team-games dropped in shortened or disrupted seasons, home runs per game fell as well, while a full season like 2019 shows a much higher baseline. The analysis pages in the navbar walk through that trend and the broader story behind it.
+
+A second theme is the long view of player greatness. By comparing career totals, the site highlights the players who stand out as the all-time sluggers, with a particular focus on how those totals overlap with the steroid era. Together, these pages show how baseball statistics can reveal both the rhythm of the season and the lasting impact of the game’s biggest hitters.
